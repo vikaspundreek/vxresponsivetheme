@@ -5,8 +5,8 @@
 
 <div class="span-12 last">
 	<div class="slider_component">
-		<div id="homepage_slider" class="svw">
-			<ul>
+		<div id="homepage_slider" class="rslides_container">
+			<ul class="rslides homeslider">
 				<c:forEach items="${banners}" var="banner" varStatus="status">
 					<c:if test="${ycommerce:evaluateRestrictions(banner)}">
 						<c:url value="${banner.urlLink}" var="encodedUrl" />
@@ -17,3 +17,4 @@
 		</div>
 	</div>
 </div>
+ 

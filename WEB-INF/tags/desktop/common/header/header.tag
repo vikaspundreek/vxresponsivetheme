@@ -15,13 +15,9 @@
 			<cms:component component="${logo}"/>
 		</cms:pageSlot>
 	</div>
-	<span id="Branding"></span>
+	<span id="Branding"></span> 
 	
-	<cms:pageSlot position="MiniCart" var="cart" limit="1">
-		<cms:component component="${cart}"/>
-	</cms:pageSlot>
-	
-	<div class="headerContent">
+	<div class="headerContent toplink">
 		<ul class="nav">
 			<sec:authorize ifAnyGranted="ROLE_CUSTOMERGROUP">
 				<li class="logged_in"><ycommerce:testId code="header_LoggedUser"><spring:theme code="header.welcome" arguments="${user.firstName},${user.lastName}" htmlEscape="true"/></ycommerce:testId></li>
@@ -42,12 +38,18 @@
 
 			<cms:pageSlot position="HeaderLinks" var="link">
 				<cms:component component="${link}" element="li"/>
-			</cms:pageSlot>
-
+			</cms:pageSlot> 
 			<li class="language-select"><header:languageSelector languages="${languages}" currentLanguage="${currentLanguage}" /></li>
 			<li class="language-currency"><header:currencySelector currencies="${currencies}" currentCurrency="${currentCurrency}" /></li>
 		</ul>
-		<header:searchBox/>
+		 
+	</div>
+
+	<div class="headerContent">
+	<cms:pageSlot position="MiniCart" var="cart" limit="1">
+		<cms:component component="${cart}"/>
+	</cms:pageSlot> 
+	<header:searchBox/> 
 	</div>
 	<div class="clear"></div>
 </div>

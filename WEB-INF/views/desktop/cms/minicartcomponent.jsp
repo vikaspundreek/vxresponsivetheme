@@ -31,37 +31,9 @@ var refreshMiniCartUrl = '${refreshMiniCartUrl}/?';
 <div id="cart_header">
 	<div id="cart_content">
 		<c:url value="/cart" var="cartUrl"/>
-		<a href="javascript:void(0)">
-			<h2>${component.title}</h2>
-			<theme:image code="img.iconCart" />
-		</a>
-		<div id="minicart_data">
-			
-				<ycommerce:testId code="miniCart_items_label">
-					<spring:theme text="items" code="cart.items" arguments="${totalItems}"/>
-				</ycommerce:testId>
-				-
-				<span>
-				<ycommerce:testId code="miniCart_total_label">
-					<c:if test="${totalDisplay == 'TOTAL'}">
-						<format:price priceData="${totalPrice}"/>
-					</c:if>
-					<c:if test="${totalDisplay == 'SUBTOTAL'}">
-						<format:price priceData="${subTotal}"/>
-					</c:if>
-					<c:if test="${totalDisplay == 'TOTAL_WITHOUT_DELIVERY'}">
-						<format:price priceData="${totalNoDelivery}"/>
-					</c:if>
-				</ycommerce:testId>
-			</span>
-		</div>
-	</div>
-	<ul>
-		<li class="active">
-			<ycommerce:testId code="miniCart_viewCart_link">
-				<a href="${cartUrl}" class="doCheckoutBut"><spring:theme text="VIEW CART" code="cart.checkout"/></a>
-			</ycommerce:testId>
-		</li>
-	</ul>
+		<a href="javascript:void(0)"><span class="mini-cart-label">${component.title}</span> [${totalItems}]</a>
+ 		 
+	</div>  
 </div>
+ 
 <cart:rolloverCartPopup/>

@@ -362,13 +362,15 @@ button p {
 	max-width: 570px;
 	position: relative;
 	z-index: 1;
+	clear:both;
 }
 
 #header .search {
-	float: right;
-	clear: right;
+	float: right; 
 	white-space: nowrap;
 }
+
+
 
 #header .search form {
 	padding-bottom: 0;
@@ -3257,6 +3259,7 @@ a.mycompany.form:hover{
 	height: 100px;
 	left: 208px;
 	top: 23px;
+	display:none;
 }
 #header input.button,
 #header button.button {
@@ -3379,9 +3382,11 @@ a.mycompany.form:hover{
 a.dropdown span {
 	background: url(../images/button-arrow-small.png) center center no-repeat scroll;
 	}
+
+
 #cart_header {
 	color: #ffffff;
-	margin-left: 15px;
+	margin:5px 15px 0 15px;
 }
 #cart_header h2 {
 	text-align: left;
@@ -3389,24 +3394,24 @@ a.dropdown span {
 	color: #ffffff;
 	margin-left: 8px;
 }
-#cart_content {
-	-webkit-border-top-left-radius: 4px;
-	-webkit-border-top-right-radius: 4px;
-	-moz-border-radius-topleft: 4px;
-	-moz-border-radius-topright: 4px;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-	text-shadow: 0 -1px 1px #111;
-	background: url(../images/bg-gradient-header-cart.png) repeat-x center top #172532;
-	padding: 7px 7px 4px 7px;
-	min-height: 53px;
-	overflow: auto;
+#cart_content { 
+	padding: 4px 7px 4px 28px;
+	background:url('../images/green-cart.png') no-repeat left center; 
 }
+
+#cart_content a{  
+	background:url('../images/green-down.gif') no-repeat right;
+	padding-right:20px; 
+	font-size: .9em;
+	color:#222;
+} 
+
 #cart_content img {
 	float: left;
 	margin-left: 10px;
 	margin-top: 8px;
 }
+  
 #cart_header dl {
 	/*background: url(../images/icon-your-cart.png) no-repeat 15px 2px transparent;*/
 	padding-top: 5px;
@@ -4763,9 +4768,10 @@ ul.review_actions li:first-child {
 }
 .prod_cat h2 {
 	font-size: 1.2em;
+ 	line-height: 2em;
 }
 .prod_cat h2 a {
-	min-height: 35px;
+	min-height: 24px;
 }
 .prod_cat h2 a,
 .prod_cat h2 a:visited {
@@ -4950,8 +4956,8 @@ ul.review_actions li:first-child {
 	font-size: 1.2em;
 }
 #rollover_cart_popup {
-	left:578px;
-	top: 77px;
+	left:0px;
+	top:0px;
 	-moz-box-shadow: 0px 8px 15px #2C3A55;
 	-webkit-box-shadow: 0px 8px 15px #2C3A55;
 	box-shadow: 0px 8px 15px #2C3A55;	

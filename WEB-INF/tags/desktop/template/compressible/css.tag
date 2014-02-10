@@ -30,7 +30,14 @@
 
 <%-- B2B css --%>
 <link rel="stylesheet" type="text/css" media="screen" href="${themeResourcePath}/css/theme-green-b2b.css" />
- 
+
+<%-- Responsive Theme --%> 
+
+<link rel="stylesheet" type="text/css"  media="screen" href="${themeResourcePath}/css/responsivegrid.css" />
+
+
+<link rel="stylesheet" type="text/css"  media="screen" href="${themeResourcePath}/css/responsiveslides.css" />
+
 <%--  AddOn Theme CSS files --%>
 <c:forEach items="${addOnThemeCssPaths}" var="addOnThemeCss">
 	   <link rel="stylesheet" type="text/css" media="all" href="${addOnThemeCss}" />

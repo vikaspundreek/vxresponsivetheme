@@ -87,6 +87,7 @@
 <script type="text/javascript" src="${commonResourcePath}/js/acc.termsandconditions.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.stars.js"></script>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.forgotpassword.js"></script>
+<script type="text/javascript" src="${commonResourcePath}/js/responsiveslides.min.js"></script>
 
 <script>
 	$(function() {
@@ -161,9 +162,26 @@
 			ACC.common.refreshScreenReaderBuffer();
 		}
 	});
-	$('#homepage_slider').waitForImages(function() {
+	/*$('#homepage_slider').waitForImages(function() {
 		$(this).slideView({toolTip: true, ttOpacity: 0.6, autoPlay: true, autoPlayTime: 8000});
+
 	});
+
+	*/
+
+	jQuery(document).ready(function($)
+	{ 
+	   $(".rslides.homeslider").responsiveSlides({
+	    auto: true,
+	    pager: true,
+	    nav: true,
+	    speed: 500,
+	    maxwidth: 800,
+	    namespace: "centered-btns"
+	  }); 
+
+	});
+ 
 	/*]]>*/
 </script>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.checkoutpickupdetails.js"></script>
@@ -177,3 +195,21 @@
 
 <%-- Fix for Webkit Browsers (Needs to be loaded last)  --%>
 <script type="text/javascript" src="${commonResourcePath}/js/acc.skiplinks.js"></script>
+
+<script>
+$(document).ready(function(){
+	 $(".menu-handle").click(function(){
+	 	var p = $(this).parent();
+	 	if($(p).hasClass("open")) { 
+	 		$(p).removeClass("open");
+	 		$(p).addClass("closed");
+	 	}else { 
+	 	    $(p).addClass("open");
+	 	    $(p).removeClass("closed");
+	 	}
+	 });
+
+	 
+}); 
+
+</script>

@@ -20,6 +20,7 @@ ACC.cartpopup = {
 		).data('hover', false);
 		
 		$('#cart_content').on('click keypress', function(e) {
+
 			if (e.type === 'click' || e.which === 13)
 			{
 				$('#cart_popup').hide();
@@ -27,9 +28,9 @@ ACC.cartpopup = {
 					url: rolloverPopupUrl,
 					cache: false,
 					type: 'GET',
-					success: function(result) {
+					success: function(result) { 
 						$('#rollover_cart_popup').html(result);
-						$('#rollover_cart_popup').fadeIn();
+						$('#rollover_cart_popup').show();
 					}
 				});
 			}

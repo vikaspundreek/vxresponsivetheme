@@ -2,8 +2,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="cms" uri="http://hybris.com/tld/cmstags" %>
 
-<div id="nav_main" class="nav_main"> 
+<div id="nav_main" class="nav_main">  
+	<div class="menu-handle">Menu</div> 
 	<cms:pageSlot position="NavigationBar" var="component" element="ul" class="clear_fix">
 		<cms:component component="${component}"/>
 	</cms:pageSlot>
-</div>
+</div> 
